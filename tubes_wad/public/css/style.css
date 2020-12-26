@@ -1,25 +1,160 @@
 body {
-    background-image: url('../img/jumbotron.jpg');
+    background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 120%;
-  }
+}
 
-#gambarlogo{
-    width: 240px;
-    height: 240px;
-    margin-top: 160px;
-   margin-left: -240px;
-    position: absolute;
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: url("/img/klinik2.png") no-repeat 100% 100%;
+    background-size: cover;
+}
+
+.content {
+    width: 94%;
+    margin: 4em auto;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.logo {
+    line-height: 60px;
+    position: fixed;
+    float: left;
+    margin: 5px 46px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 2px;
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    line-height: 60px;
+}
+
+nav ul {
+    line-height: 20px;
+    list-style: none;
+    background: rgba(0, 0, 0, 0);
+    overflow: hidden;
+    color: black;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    padding-right: -25px;
+    transition: 1s;
+
+}
+
+nav.black ul {
+    background: #65CFBB;
+    color: #65CFBB;
+
+
+}
+
+
+nav ul li {
     display: inline-block;
+    padding: 16px 40px;
+    color: #65CFBB;
+
 }
 
-#navbarTogglerDemo01{
-    margin-left: 300px;
+nav ul li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px #388476;
+    font-size: 20px;
+
 }
 
-.navbar{
-font-size: 25px;
-background-color: #65CFBB;
-color: white;
+.menu-icon {
+    line-height: 60px;
+    width: 100%;
+    background: #000;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 15px 24px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
 }
+
+
+hr {
+    width: 250px;
+    border-top: 3px solid #65CFBB;
+    
+}
+
+section{
+    min-height: 650px;
+}
+
+.about{
+    padding-top: 10px;
+}
+
+.services{
+    background-color: #F8F9FA;
+    padding-top: 10px;
+}
+
+.contacts{
+    padding-top: 10px;
+}
+
+.team{
+    background-color: #F8F9FA;
+    padding-top: 10px;
+}
+
+.register{
+    padding-top: 10px;
+}
+
+
+
+
+@media(max-width: 786px) {
+
+    .logo {
+        position: fixed;
+        top: 0;
+        margin-top: 16px;
+    }
+
+    nav ul {
+        max-height: 0px;
+        background: #65CFBB;
+    }
+
+    nav.black ul {
+        background: #65CFBB;
+    }
+
+    .showing {
+        max-height: 34em;
+    }
+
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
