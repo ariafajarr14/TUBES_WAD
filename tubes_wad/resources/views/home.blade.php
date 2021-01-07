@@ -33,16 +33,72 @@
 
     </script>
 
-    
+
 
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <!-- home -->
+    <!--
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    -->
+
+
+
+
     <section class="home" id="home">
         <header>
             <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">
+                    <a href="#home" class="page-scroll"><img src="/img/klinikku3.png" alt=""></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#home" class="page-scroll">Home</a></li>
+                        <li><a href="#about" class="page-scroll">Tentang kami</a></li>
+                        <li><a href="#services" class="page-scroll">Layanan</a></li>
+                        <li><a href="#contacts" class="page-scroll">Kontak</a></li>
+                        <li><a href="#team" class="page-scroll">Tim</a></li>
+                        <li><a href="/login"><button type="button" class="btn"
+                                    style="color:white; background-color: #65CFBB; margin-left:100px;">Login</button></a>
+                        </li>
+                        <li><a href="#register" class="page-scroll"><button type="button" class="btn"
+                                    style="color:white; background-color: #65CFBB; margin-left:-70px;">Register</button></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </section>
+
+
+
+
+    <!-- home
+            <nav class="navbar fixed-top " >
                 <div class="menu-icon">
                     <i class="fa fa-bars fa-2x"></i>
                 </div>
@@ -65,29 +121,45 @@
                     </ul>
                 </div>
             </nav>
+
+
+
+    <section class="home" id="home">
+        <header>
         </header>
     </section>
+-->
 
     <!-- About us -->
     <section class="about" id="about">
         <div class="content">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center">About us</h2>
-                    <center>
-                        <hr>
-                    </center>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5" style="height: 559px;">
+                        <img src="/img/aboutus.png" alt="">
+                    </div>
+                    <div class="col-sm-7">
+                        <h2 class="text-center">Tentang Kami</h2>
+                        <center>
+                            <hr>
+                        </center>
+                        <p>
+                            <strong>Klinik Ku</strong> merupakan platform klinik digital yang siap melayani
+                            dan membantu masalah kesehatan kamu kapanpun dan dimanapun.
+                        </p>
+                        <br>
+                        <h5 id="h5text">Mengapa pilih Klinik Ku ?</h5>
+                        <p>Memilih Klinik Ku akan mempertemukan kamu dengan dokter umum yang berpengalaman dan
+                            tersertifikasi secara cepat. Tidak perlu repot mencari dokter terdekat dan harus keluar
+                            rumah. Klinik Ku memastikan kamu mendapatkan pelayanan terbaik.
+                            Kamu bisa melakukan konsultasi dan diskusi kesehatan dengan dokter kami, rekomendasi obat,
+                            rujukan ke rumah sakit, hingga terapi pemulihan pasca sembuh dari penyakit dan upaya
+                            pencegahan terhadap penyakit maupun kondisi kesehatan lainnya.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur a, amet aut ab quos ipsa?
-                Maiores beatae numquam voluptates voluptatibus, perspiciatis, consequatur, porro explicabo quisquam nemo
-                totam quia sit.
-                Nisi cupiditate repellendus et accusamus doloremque. Minus et, sed suscipit cum, ducimus non maiores
-                eligendi quae aliquam aperiam vitae eveniet voluptatibus. Provident soluta pariatur nesciunt odio
-                deserunt fuga, ab repudiandae.
-                Dicta iure ipsa laborum odio autem mollitia? Aspernatur eius, asperiores cupiditate dignissimos adipisci
-                illo accusamus, quam quasi placeat aliquam vero impedit labore repudiandae voluptatibus autem
-                architecto, quia similique. Sequi, recusandae?</p>
+
         </div>
     </section>
 
@@ -96,92 +168,305 @@
         <div class="content">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center">Services</h2>
+                    <h2 class="text-center">Layanan Kami</h2>
                     <center>
                         <hr>
                     </center>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur a, amet aut ab quos ipsa?
-                Maiores beatae numquam voluptates voluptatibus, perspiciatis, consequatur, porro explicabo quisquam nemo
-                totam quia sit.
-                Nisi cupiditate repellendus et accusamus doloremque. Minus et, sed suscipit cum, ducimus non maiores
-                eligendi quae aliquam aperiam vitae eveniet voluptatibus. Provident soluta pariatur nesciunt odio
-                deserunt fuga, ab repudiandae.
-                Dicta iure ipsa laborum odio autem mollitia? Aspernatur eius, asperiores cupiditate dignissimos adipisci
-                illo accusamus, quam quasi placeat aliquam vero impedit labore repudiandae voluptatibus autem
-                architecto, quia similique. Sequi, recusandae?</p>
-        </div>
+            <div id="carouselExampleCaptions" class="carousel carousel-danger slide" data-bs-ride="carousel"
+                style="border-radius: 25px;">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" style="border-radius: 25px; color:aqua;">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="/img/konsultasi.jpg" class="d-block w-100 " alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Konsultasi dengan Dokter</h5>
+                            <p>Melalui platform ini, kamu dapat berkonsultasi langsung dengan Dokter umum yang sudah
+                                berpengalaman dan terverifikasi tanpa harus datang langsung ke klinik.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/img/obat.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Resep Obat yang Aman dan Terjangkau</h5>
+                            <p>Resep Obat kami diberikan pasti aman dan terjangkau sehingga dapat dijangkau oleh semua
+                                kalangan. </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/img/apotek.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Apotek</h5>
+                            <p>Penebusan resep obat dapat dilakukan langsung di Apotek Klinik Ku yang ada di lokasi
+                                Klinik Ku.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="/img/rumahsakit.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rujukan dengan Rumah Sakit terdekat</h5>
+                            <p>Kami dapat memberi rujukan ke rumah sakit terbaik di sekitar tempat tinggal kamu jadi
+                                kamu tidak perlu khawatir jika kondisi kamu perlu penanganan lebih lanjut.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
     </section>
 
     <!-- Contacts -->
     <section class="contacts" id="contacts">
         <div class="content">
             <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center">Contacts</h2>
+                <div class="col-sm-4">
+                    <h2 class="text-center">Kontak</h2>
                     <center>
                         <hr>
                     </center>
+                    <div class="icon" style="">
+                        <div class="description">
+                            Kamu dapat menghubungi dan memberi feedback kepada kami melalui :
+                        </div>
+                        <br>
+                        <div class="icon1" style="color:#56B0D2">
+                            <img src="/img/icon_telp.png" alt="">
+                            Emergecy Call
+                            <p style="margin-left: 55px;">021-222-333
+                            </p>
+                        </div>
+                        <div class="icon2" style="color:#56B0D2">
+                            <img src="/img/icon_email.png" alt="">Email
+                            <p style="margin-left: 51px;">klinikku@medica.co.id
+                            </p>
+                        </div>
+                        <div class="icon3" style="color:#56B0D2">
+                            <img src="/img/icon_alamat.png" alt="">Alamat
+                            <p style="margin-left: 55px;">Jln. Kesehatan No.1 Blok.OK
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-8" style="height:559px;">
+                    <img src="/img/contacts.png" style=" float:right; height:100%;" alt="">
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur a, amet aut ab quos ipsa?
-                Maiores beatae numquam voluptates voluptatibus, perspiciatis, consequatur, porro explicabo quisquam nemo
-                totam quia sit.
-                Nisi cupiditate repellendus et accusamus doloremque. Minus et, sed suscipit cum, ducimus non maiores
-                eligendi quae aliquam aperiam vitae eveniet voluptatibus. Provident soluta pariatur nesciunt odio
-                deserunt fuga, ab repudiandae.
-                Dicta iure ipsa laborum odio autem mollitia? Aspernatur eius, asperiores cupiditate dignissimos adipisci
-                illo accusamus, quam quasi placeat aliquam vero impedit labore repudiandae voluptatibus autem
-                architecto, quia similique. Sequi, recusandae?</p>
+
         </div>
     </section>
 
     <!-- Team -->
     <section class="team" id="team">
-        <div class="content">
+        <div class="content" style="width: 90%;">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center">Team</h2>
+                    <h2 class="text-center">Tim</h2>
                     <center>
                         <hr>
                     </center>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur a, amet aut ab quos ipsa?
-                Maiores beatae numquam voluptates voluptatibus, perspiciatis, consequatur, porro explicabo quisquam nemo
-                totam quia sit.
-                Nisi cupiditate repellendus et accusamus doloremque. Minus et, sed suscipit cum, ducimus non maiores
-                eligendi quae aliquam aperiam vitae eveniet voluptatibus. Provident soluta pariatur nesciunt odio
-                deserunt fuga, ab repudiandae.
-                Dicta iure ipsa laborum odio autem mollitia? Aspernatur eius, asperiores cupiditate dignissimos adipisci
-                illo accusamus, quam quasi placeat aliquam vero impedit labore repudiandae voluptatibus autem
-                architecto, quia similique. Sequi, recusandae?</p>
+            <br>
+            <div align="center" class="row">
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/img/bobob.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Achmad Husein Mulya WNH</h4>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/img/petrik.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Aria Fajar Ramdhany</h4>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/img/sandy.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Fitria Nikmatul Hidayah</h4>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div align="center" class="row" style="">
+                <div class="col-sm-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/img/squid.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>M. Affan Ramadhani</h4>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <img src="/img/mrcrab.png" alt="Avatar" style="width:300px;height:300px;">
+                            </div>
+                            <div class="flip-card-back">
+                                <h4>Yusuf Herianto Manik</h4>
+                                <p>Architect & Engineer</p>
+                                <p>We love that guy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        </div>
+        <br>
     </section>
 
     <!-- Register -->
     <section class="register" id="register">
         <div class="content">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center">Register</h2>
+            
+            <div class="row container-page">				
+			<div class="col-md-7">
+			<h2 class="text-center">Registrasi</h2>
                     <center>
                         <hr>
                     </center>
+				<div class="form-group col-lg-12">
+					<label>Username</label>
+					<input type="" name="" class="form-control" id="" value="">
+				</div>
+				<div class="row">
+                <div class="form-group col-lg-6">
+					<label>Password</label>
+					<input type="password" name="" class="form-control" id="" value="">
+				</div>
+				
+				<div class="form-group col-lg-6">
+					<label>Repeat Password</label>
+					<input type="password" name="" class="form-control" id="" value="">
+				</div>
+                </div>
+				<div class="row">
+                <div class="form-group col-lg-6">
+					<label>Email Address</label>
+					<input type="" name="" class="form-control" id="" value="">
+				</div>
+				
+				<div class="form-group col-lg-6">
+					<label>Repeat Email Address</label>
+					<input type="" name="" class="form-control" id="" value="">
+				</div>		
+                </div>
+								
+					
+				<br>
+			</div>
+		
+			<div class="col-md-5" ">
+				<h4 class="dark-grey">Terms and Conditions</h4>
+				<p class="textregist">
+					By clicking on "Register" you agree to The Company's' Terms and Conditions
+				</p>
+				<p class="textregist">
+					While rare, prices are subject to change based on exchange rate fluctuations - 
+					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
+				</p>
+				<p class="textregist">
+					Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
+				</p>
+				<p class="textregist">
+					Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
+				</p>
+				
+				<center><button type="submit" class="btn btn-primary">Register</button></center>
+			</div>
+		</div>
+    </section>
+
+    <footer class="section footer-classic context-dark bg-image" style="background: #254d45;">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+                    <div class="pr-xl-4">
+                        <h4>Klinik Ku</h4>
+                        <p>Aplikasi Klinik Ku masih jauh dari kata sempurna, Oleh karena itu, kami sangat mengharapkan
+                            adanya feedback dari teman-teman pengguna Klinik Ku bisa berupa Kritik dan Saran yang dapat
+                            disampaikan ke bagian kontak kami demi peningkatan kualitas dan layanan kami untuk kamu.
+                            .</p>
+                        <!-- Rights-->
+                        <p class="rights"><span>©  </span><span
+                                class="copyright-year">2021</span><span> </span><span>Klinik-Ku</span><span>. </span><span>All
+                                Rights Reserved.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kontak</h5>
+                    <dl class="contact-list">
+                        <dt>Alamat:</dt>
+                        <dd>Jln. Kesehatan No.1 Blok.OK</dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>email:</dt>
+                        <dd><a href="mailto:#">klinikku@medica.co.id</a></dd>
+                    </dl>
+                    <dl class="contact-list">
+                        <dt>phones:</dt>
+                        <dd><a href="tel:#">021-222-333</a>
+                        </dd>
+                    </dl>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio consequatur a, amet aut ab quos ipsa?
-                Maiores beatae numquam voluptates voluptatibus, perspiciatis, consequatur, porro explicabo quisquam nemo
-                totam quia sit.
-                Nisi cupiditate repellendus et accusamus doloremque. Minus et, sed suscipit cum, ducimus non maiores
-                eligendi quae aliquam aperiam vitae eveniet voluptatibus. Provident soluta pariatur nesciunt odio
-                deserunt fuga, ab repudiandae.
-                Dicta iure ipsa laborum odio autem mollitia? Aspernatur eius, asperiores cupiditate dignissimos adipisci
-                illo accusamus, quam quasi placeat aliquam vero impedit labore repudiandae voluptatibus autem
-                architecto, quia similique. Sequi, recusandae?</p>
         </div>
-    </section>
+        <div class="row no-gutters social-container">
+            <div class="col"><a class="social-inner" href="#"><span
+                        class="icon mdi mdi-facebook"></span><span>Facebook</span></a></div>
+            <div class="col"><a class="social-inner" href="#"><span
+                        class="icon mdi mdi-instagram"></span><span>instagram</span></a></div>
+            <div class="col"><a class="social-inner" href="#"><span
+                        class="icon mdi mdi-twitter"></span><span>twitter</span></a></div>
+            <div class="col"><a class="social-inner" href="#"><span
+                        class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -206,8 +491,8 @@
             var elemenTujuan = $(tujuan);
 
             $('html , body').animate({
-                scrollTop: elemenTujuan.offset().top - 40
-            }, 1200, 'swing');
+                scrollTop: elemenTujuan.offset().top - 0
+            }, 900, 'swing');
 
             e.preventDefault();
         });
