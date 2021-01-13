@@ -39,33 +39,8 @@
 </head>
 
 <body>
-    <!--
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-    -->
 
-
-
-
+    <!-- Home -->
     <section class="home" id="home">
         <header>
             <nav>
@@ -82,7 +57,7 @@
                         <li><a href="#services" class="page-scroll">Layanan</a></li>
                         <li><a href="#contacts" class="page-scroll">Kontak</a></li>
                         <li><a href="#team" class="page-scroll">Tim</a></li>
-                        <li><a href="/login"><button type="button" class="btn"
+                        <li><a href="/UserAuth/login"><button type="button" class="btn"
                                     style="color:white; background-color: #65CFBB; margin-left:100px;">Login</button></a>
                         </li>
                         <li><a href="#register" class="page-scroll"><button type="button" class="btn"
@@ -93,42 +68,6 @@
             </nav>
         </header>
     </section>
-
-
-
-
-    <!-- home
-            <nav class="navbar fixed-top " >
-                <div class="menu-icon">
-                    <i class="fa fa-bars fa-2x"></i>
-                </div>
-                <div class="logo">
-                    <a href="#home" class="page-scroll"><img src="/img/klinikku3.png" alt="" style="width: 200px; height:200px;"></a>
-                </div>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#home" class="page-scroll">Home</a></li>
-                        <li><a href="#about" class="page-scroll">About us</a></li>
-                        <li><a href="#services" class="page-scroll">Services</a></li>
-                        <li><a href="#contacts" class="page-scroll">Contacts</a></li>
-                        <li><a href="#team" class="page-scroll">Team</a></li>
-                        <li><a href="#"><button type="button" class="btn"
-                                    style="color:white; background-color: #65CFBB; margin-left:100px;">Login</button></a>
-                        </li>
-                        <li><a href="#register" class="page-scroll"><button type="button" class="btn"
-                                    style="color:white; background-color: #65CFBB; margin-left:-70px;">Register</button></a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-
-
-    <section class="home" id="home">
-        <header>
-        </header>
-    </section>
--->
 
     <!-- About us -->
     <section class="about" id="about">
@@ -363,63 +302,73 @@
     <!-- Register -->
     <section class="register" id="register">
         <div class="content">
-            
-            <div class="row container-page">				
-			<div class="col-md-7">
-			<h2 class="text-center">Registrasi</h2>
+
+            <div class="row container-page ml-auto mr-auto">
+                <div class="col-md-12">
+                    <h2 class="text-center">Registrasi</h2>
                     <center>
                         <hr>
                     </center>
-				<div class="form-group col-lg-12">
-					<label>Username</label>
-					<input type="" name="" class="form-control" id="" value="">
-				</div>
-				<div class="row">
-                <div class="form-group col-lg-6">
-					<label>Password</label>
-					<input type="password" name="" class="form-control" id="" value="">
-				</div>
-				
-				<div class="form-group col-lg-6">
-					<label>Repeat Password</label>
-					<input type="password" name="" class="form-control" id="" value="">
-				</div>
+                    <div class="form-group col-lg-6">
+                        <label>Nama Lengkap</label>
+                        <input type="" name="" class="form-control" id="" value="" placeholder="Contoh : Ucen Nurhakim">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Username</label>
+                        <input type="" name="" class="form-control" id="" value="" placeholder="Maksimal 12 Huruf">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3">
+                            <label>Password</label>
+                            <input type="password" name="" class="form-control" id="" value="">
+                        </div>
+
+                        <div class="form-group col-lg-3">
+                            <label>Repeat Password</label>
+                            <input type="password" name="" class="form-control" id="" value="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-lg-3">
+                            <label>Email Address</label>
+                            <input type="" name="" class="form-control" id="" value="">
+                        </div>
+
+                        <div class="form-group col-lg-3">
+                            <label>Repeat Email Address</label>
+                            <input type="" name="" class="form-control" id="" value="">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label for="inputAddress">Alamat Lengkap</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Contoh: Jln. Jalan Kuy">
+                    </div>
+                    <div class="row">
+                        <legend class="col-form-label col-sm-3 pt-0">Jenis Kelamin</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                    value="option1">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Laki-laki
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                    value="option2">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Perempuan
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <center><button type="submit" class="btn btn-primary">Register</button></center>
                 </div>
-				<div class="row">
-                <div class="form-group col-lg-6">
-					<label>Email Address</label>
-					<input type="" name="" class="form-control" id="" value="">
-				</div>
-				
-				<div class="form-group col-lg-6">
-					<label>Repeat Email Address</label>
-					<input type="" name="" class="form-control" id="" value="">
-				</div>		
-                </div>
-								
-					
-				<br>
-			</div>
-		
-			<div class="col-md-5" ">
-				<h4 class="dark-grey">Terms and Conditions</h4>
-				<p class="textregist">
-					By clicking on "Register" you agree to The Company's' Terms and Conditions
-				</p>
-				<p class="textregist">
-					While rare, prices are subject to change based on exchange rate fluctuations - 
-					should such a fluctuation happen, we may request an additional payment. You have the option to request a full refund or to pay the new price. (Paragraph 13.5.8)
-				</p>
-				<p class="textregist">
-					Should there be an error in the description or pricing of a product, we will provide you with a full refund (Paragraph 13.5.6)
-				</p>
-				<p class="textregist">
-					Acceptance of an order by us is dependent on our suppliers ability to provide the product. (Paragraph 13.5.6)
-				</p>
-				
-				<center><button type="submit" class="btn btn-primary">Register</button></center>
-			</div>
-		</div>
+
+            </div>
     </section>
 
     <footer class="section footer-classic context-dark bg-image" style="background: #254d45;">

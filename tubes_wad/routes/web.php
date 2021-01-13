@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserAuth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +19,10 @@ use Illuminate\Support\Facades\Route;
 });
 */
 
-Route::view('/', 'landing/home');
-Route::view('/login', '/login');
+Route::get('/', function() {
+    return view('landing/home');
+});
+
+
+Route::view('UserAuth/login', 'UserAuth/login');
+Route::view('/UserAuth/register', '/UserAuth/register');
