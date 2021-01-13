@@ -30,7 +30,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
-                                <h3 class="login-heading mb-4">Selamat Datang!</h3>
+                                <h3 class="login-heading mb-4">Ayo Gabung Bersama Kami!</h3>
                                 <form action="user" method="POST">
                                     <div class="form-label-group">
                                         <input type="text" id="inputName" class="form-control"
@@ -54,20 +54,56 @@
                                         <div class="form-label-group col-lg-6">
                                             <input type="password" id="inputRePassword" class="form-control"
                                                 placeholder="RePassword" required>
-                                            <label for="inputRePassword" style="margin-left: 11px;">Repeat Password</label>
+                                            <label for="inputRePassword" style="margin-left: 11px;">Ulangi
+                                                Password</label>
                                         </div>
                                     </div>
 
+                                    <div class="row">
+                                        <div class="form-label-group col-lg-6">
+                                            <input type="email" id="inputEmail" class="form-control" placeholder="Email"
+                                                required>
+                                            <label for="inputEmail" style="margin-left: 11px;">Email</label>
+                                        </div>
 
-                                    <div class="custom-control custom-checkbox mb-3">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                                        <div class="form-label-group col-lg-6">
+                                            <input type="email" id="inputReEmail" class="form-control"
+                                                placeholder="ReEmail" required>
+                                            <label for="inputReEmail" style="margin-left: 11px;">Ulangi Password</label>
+                                        </div>
                                     </div>
-                                    <button
-                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2"
-                                        type="submit">Sign in</button>
-                                    <div class="text-center">
-                                        <a class="small" href="#">Forgot password?</a></div>
+
+                                    <div class="form-label-group">
+                                        <input type="text" id="inputAlamat" class="form-control" placeholder="Alamat"
+                                            required autofocus>
+                                        <label for="inputAlamat">Alamat</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <legend class="col-form-label col-sm-4 pt-0">Jenis Kelamin</legend>
+                                        <div class="col-sm-8 row">
+                                            <div class="form-check col-sm-5">
+                                                <input class="form-check-input " type="radio" name="gridRadios"
+                                                    id="gridRadios1" value="option1">
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    Laki-laki
+                                                </label>
+                                            </div>
+                                            <div class="form-check col-sm-4">
+                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                    id="gridRadios2" value="option2">
+                                                <label class="form-check-label" for="gridRadios2">
+                                                    Perempuan
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2 mt-2"
+                                            type="submit">Sign Up</button>
+                                        <hr class="mt-2">
+                                        <div class="text-center">
+                                            Sudah punya akun ?<a href="login">Sign In</a></div>
+                                        <div class="text-center">
                                 </form>
                             </div>
                         </div>

@@ -60,7 +60,7 @@
                         <li><a href="/UserAuth/login"><button type="button" class="btn"
                                     style="color:white; background-color: #65CFBB; margin-left:100px;">Login</button></a>
                         </li>
-                        <li><a href="#register" class="page-scroll"><button type="button" class="btn"
+                        <li><a href="/UserAuth/register" class="page-scroll"><button type="button" class="btn"
                                     style="color:white; background-color: #65CFBB; margin-left:-70px;">Register</button></a>
                         </li>
                     </ul>
@@ -297,78 +297,6 @@
         </div>
         </div>
         <br>
-    </section>
-
-    <!-- Register -->
-    <section class="register" id="register">
-        <div class="content">
-
-            <div class="row container-page ml-auto mr-auto">
-                <div class="col-md-12">
-                    <h2 class="text-center">Registrasi</h2>
-                    <center>
-                        <hr>
-                    </center>
-                    <div class="form-group col-lg-6">
-                        <label>Nama Lengkap</label>
-                        <input type="" name="" class="form-control" id="" value="" placeholder="Contoh : Ucen Nurhakim">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label>Username</label>
-                        <input type="" name="" class="form-control" id="" value="" placeholder="Maksimal 12 Huruf">
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-3">
-                            <label>Password</label>
-                            <input type="password" name="" class="form-control" id="" value="">
-                        </div>
-
-                        <div class="form-group col-lg-3">
-                            <label>Repeat Password</label>
-                            <input type="password" name="" class="form-control" id="" value="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-3">
-                            <label>Email Address</label>
-                            <input type="" name="" class="form-control" id="" value="">
-                        </div>
-
-                        <div class="form-group col-lg-3">
-                            <label>Repeat Email Address</label>
-                            <input type="" name="" class="form-control" id="" value="">
-                        </div>
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label for="inputAddress">Alamat Lengkap</label>
-                        <input type="text" class="form-control" id="inputAddress" placeholder="Contoh: Jln. Jalan Kuy">
-                    </div>
-                    <div class="row">
-                        <legend class="col-form-label col-sm-3 pt-0">Jenis Kelamin</legend>
-                        <div class="col-sm-9">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                    value="option1">
-                                <label class="form-check-label" for="gridRadios1">
-                                    Laki-laki
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                    value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Perempuan
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <br>
-                    <center><button type="submit" class="btn btn-primary">Register</button></center>
-                </div>
-
-            </div>
     </section>
 
     <footer class="section footer-classic context-dark bg-image" style="background: #254d45;">
