@@ -1,7 +1,9 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +26,26 @@ Route::get('/', function() {
 });
 
 
-Route::view('UserAuth/login', 'UserAuth/login');
-Route::view('/UserAuth/register', '/UserAuth/register');
+//dashboard
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/dashboard/dashboard', [DashboardController::class, 'dashboard']);
+
+//userAuth
+Route::get('/UserAuth/login', [AuthController::class, 'login']);
+Route::get('/UserAuth/register', [AuthController::class, 'register']);
+Route::post('/UserAuth/postlogin', [AuthController::class, 'postlogin']);
+Route::post('/UserAuth/postregister', [AuthController::class, 'postregister']);
+
+
+
+Route::post('create', [AuthController::class, 'create'])->name('create');
+
+
+Route::get('/dashboard/profile', [DashboardController::class, 'profile']);
+Route::get('/dashboard/404', [DashboardController::class, 'error']);
+Route::get('/dashboard/basic-table', [DashboardController::class, 'icon']);
+Route::get('/dashboard/blank', [DashboardController::class, 'blank']);
+Route::get('/dashboard/fontawesome', [DashboardController::class, 'fontawesome']);
+Route::get('/dashboard/map-google', [DashboardController::class, 'map']);
+
+

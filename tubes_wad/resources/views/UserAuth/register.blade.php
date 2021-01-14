@@ -31,67 +31,49 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">Ayo Gabung Bersama Kami!</h3>
-                                <form action="user" method="POST">
+                                <form action="{{route('create')}}" method="POST">
+                                    @csrf
+                                    
                                     <div class="form-label-group">
-                                        <input type="text" id="inputName" class="form-control"
-                                            placeholder="Nama Lengkap" required autofocus>
-                                        <label for="inputName">Nama Lengkap</label>
+                                        <input type="text" name="nama" id="nama" class="form-control"
+                                            placeholder="Nama Lengkap" value="{{old('nama')}}" required autofocus>
+                                        <label for="nama">Nama Lengkap</label>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="text" id="inputUsername" class="form-control"
-                                            placeholder="Username" required>
-                                        <label for="inputUsername">Username</label>
+                                        <input type="text" name="username" id="username" class="form-control"
+                                            placeholder="username" value="{{old('username')}}" required>
+                                        <label for="username">Username</label>
                                     </div>
 
                                     <div class="row">
-                                        <div class="form-label-group col-lg-6">
-                                            <input type="password" id="inputPassword" class="form-control"
-                                                placeholder="Password" required>
-                                            <label for="inputPassword" style="margin-left: 11px;">Password</label>
-                                        </div>
-
-                                        <div class="form-label-group col-lg-6">
-                                            <input type="password" id="inputRePassword" class="form-control"
-                                                placeholder="RePassword" required>
-                                            <label for="inputRePassword" style="margin-left: 11px;">Ulangi
-                                                Password</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="form-label-group col-lg-6">
-                                            <input type="email" id="inputEmail" class="form-control" placeholder="Email"
+                                        <div class="form-label-group col-lg-12">
+                                            <input type="password" name="password" id="password"
+                                                class="form-control" placeholder="Password" value="{{old('password')}}"
                                                 required>
-                                            <label for="inputEmail" style="margin-left: 11px;">Email</label>
-                                        </div>
-
-                                        <div class="form-label-group col-lg-6">
-                                            <input type="email" id="inputReEmail" class="form-control"
-                                                placeholder="ReEmail" required>
-                                            <label for="inputReEmail" style="margin-left: 11px;">Ulangi Password</label>
+                                            <label for="password" style="margin-left: 11px;">Password</label>
                                         </div>
                                     </div>
 
                                     <div class="form-label-group">
-                                        <input type="text" id="inputAlamat" class="form-control" placeholder="Alamat"
-                                            required autofocus>
-                                        <label for="inputAlamat">Alamat</label>
+                                        <input type="text" id="alamat" name="alamat" class="form-control"
+                                            placeholder="Alamat" value="{{old('alamat')}}" required autofocus>
+                                        <label for="alamat">Alamat</label>
                                     </div>
 
                                     <div class="row">
                                         <legend class="col-form-label col-sm-4 pt-0">Jenis Kelamin</legend>
                                         <div class="col-sm-8 row">
                                             <div class="form-check col-sm-5">
-                                                <input class="form-check-input " type="radio" name="gridRadios"
-                                                    id="gridRadios1" value="option1">
+                                                <input class="form-check-input " type="radio" name="jenisKelamin"
+                                                    id="jenisKelamin" value="{{old('jenisKelamin')}}" value="option1">
                                                 <label class="form-check-label" for="gridRadios1">
                                                     Laki-laki
                                                 </label>
                                             </div>
                                             <div class="form-check col-sm-4">
-                                                <input class="form-check-input" type="radio" name="gridRadios"
-                                                    id="gridRadios2" value="option2">
+                                                <input class="form-check-input" type="radio" name="jenisKelamin"
+                                                    id="jenisKelamin" value="{{old('jenisKelamin')}}" value="option2">
                                                 <label class="form-check-label" for="gridRadios2">
                                                     Perempuan
                                                 </label>
