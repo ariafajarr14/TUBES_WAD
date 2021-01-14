@@ -1,9 +1,7 @@
 <?php
 
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,37 +13,13 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-/*
-* Route::get('/', function () {
-    return view('home');
-});
-*/
-
-Route::get('/', function() {
-    return view('landing/home');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 
-//dashboard
-Route::get('/dashboard', [DashboardController::class, 'index']);
-Route::get('/dashboard/dashboard', [DashboardController::class, 'dashboard']);
+Auth::routes();
 
-//userAuth
-Route::get('/UserAuth/login', [AuthController::class, 'login']);
-Route::get('/UserAuth/register', [AuthController::class, 'register']);
-Route::post('/UserAuth/postlogin', [AuthController::class, 'postlogin']);
-Route::post('/UserAuth/postregister', [AuthController::class, 'postregister']);
-
-
-
-Route::post('create', [AuthController::class, 'create'])->name('create');
-
-
-Route::get('/dashboard/profile', [DashboardController::class, 'profile']);
-Route::get('/dashboard/404', [DashboardController::class, 'error']);
-Route::get('/dashboard/basic-table', [DashboardController::class, 'icon']);
-Route::get('/dashboard/blank', [DashboardController::class, 'blank']);
-Route::get('/dashboard/fontawesome', [DashboardController::class, 'fontawesome']);
-Route::get('/dashboard/map-google', [DashboardController::class, 'map']);
-
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/layouts/form', [App\Http\Controllers\HomeController::class, 'form'])->name('form');
+Route::get('/layouts/pembayaran', [App\Http\Controllers\HomeController::class, 'pembayaran'])->name('pembayaran');

@@ -17,7 +17,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/userpage/plugins/images/favicon.png">
     <!-- Custom CSS -->
     <link href="/userpage/plugins/bower_components/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/userpage/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
+    <link rel="stylesheet"
+        href="/userpage/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css">
     <!-- Custom CSS -->
     <link href="/userpage/css/style.min.css" rel="stylesheet">
 </head>
@@ -50,14 +51,11 @@
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!-- Dark Logo icon -->
-                            <img src="/userpage/plugins/images/logo-icon.png" alt="homepage" />
+                            <img src="/img/logo-klinikku.png" alt="homepage" style="">
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span class="logo-text">
-                            <!-- dark Logo text -->
-                            <img src="/userpage/plugins/images/logo-text.png" alt="homepage" />
-                        </span>
+                        
                     </a>
                     <!-- ============================================================== -->
                     <!-- End Logo -->
@@ -86,21 +84,12 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class=" in">
-                            <form role="search" class="app-search d-none d-md-block mr-3">
-                                <input type="text" placeholder="Search..." class="form-control mt-0">
-                                <a href="" class="active">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </form>
-                        </li>
+
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
                         <li>
-                            <a class="profile-pic" href="#">
-                                <img src="/userpage/plugins/images/users/varun.jpg" alt="user-img" width="36"
-                                    class="img-circle"><span class="text-white font-medium">Steave</span></a>
+                            <span class="text-white font-medium mr-4">Hi, {{ Auth::user()->name }}</span>
                         </li>
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
@@ -123,59 +112,36 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li class="sidebar-item pt-2">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="dashboard.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/home"
                                 aria-expanded="false">
                                 <i class="far fa-clock" aria-hidden="true"></i>
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="profile.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/form"
                                 aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Profile</span>
+                                <span class="hide-menu">Form Keluhan</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="basic-table.html"
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/pembayaran"
                                 aria-expanded="false">
-                                <i class="fa fa-table" aria-hidden="true"></i>
-                                <span class="hide-menu">Basic Table</span>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span class="hide-menu">Pembayaran</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="fontawesome.html"
-                                aria-expanded="false">
-                                <i class="fa fa-font" aria-hidden="true"></i>
-                                <span class="hide-menu">Icon</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="map-google.html"
-                                aria-expanded="false">
-                                <i class="fa fa-globe" aria-hidden="true"></i>
-                                <span class="hide-menu">Google Map</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="blank.html"
-                                aria-expanded="false">
-                                <i class="fa fa-columns" aria-hidden="true"></i>
-                                <span class="hide-menu">Blank Page</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="404.html"
-                                aria-expanded="false">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                <span class="hide-menu">Error 404</span>
-                            </a>
-                        </li>
-                        <li class="text-center p-20 upgrade-btn">
-                            <a href="https://www.wrappixel.com/templates/ampleadmin/"
-                                class="btn btn-block btn-danger text-white" target="_blank">
-                                Upgrade to Pro</a>
-                        </li>
+                        <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+
+
                     </ul>
 
                 </nav>
@@ -383,8 +349,8 @@
                             <h3 class="box-title mb-0">Recent Comments</h3>
                             <div class="comment-center">
                                 <div class="comment-body d-flex">
-                                    <div class="user-img"> <img src="/userpage/plugins/images/users/pawandeep.jpg" alt="user"
-                                            class="img-circle">
+                                    <div class="user-img"> <img src="/userpage/plugins/images/users/pawandeep.jpg"
+                                            alt="user" class="img-circle">
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Pavan kumar</h5><span class="time">10:20 AM 20 may 2016</span>
@@ -417,8 +383,8 @@
                                     </div>
                                 </div>
                                 <div class="comment-body d-flex border-0">
-                                    <div class="user-img"> <img src="/userpage/plugins/images/users/arijit.jpg" alt="user"
-                                            class="img-circle">
+                                    <div class="user-img"> <img src="/userpage/plugins/images/users/arijit.jpg"
+                                            alt="user" class="img-circle">
                                     </div>
                                     <div class="mail-contnet">
                                         <h5>Arijit singh</h5><span class="time">10:20 AM 20 may 2016</span>
@@ -450,7 +416,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/varun.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">Varun Dhavan <small
                                                         class="d-block text-success d-block">online</small></span>
@@ -467,7 +434,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/genu.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/genu.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">Genelia
                                                     Deshmukh <small class="d-block text-warning">Away</small></span>
@@ -484,7 +452,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/ritesh.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/ritesh.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">Ritesh
                                                     Deshmukh <small class="d-block text-danger">Busy</small></span>
@@ -501,7 +470,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/arijit.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/arijit.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">Arijit
                                                     Sinh <small class="d-block text-muted">Offline</small></span>
@@ -536,7 +506,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/hritik.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/hritik.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">John
                                                     Abraham<small class="d-block text-success">online</small></span>
@@ -553,7 +524,8 @@
                                             </button>
                                         </div>
                                         <a href="javascript:void(0)" class="d-flex align-items-center"><img
-                                                src="/userpage/plugins/images/users/varun.jpg" alt="user-img" class="img-circle">
+                                                src="/userpage/plugins/images/users/varun.jpg" alt="user-img"
+                                                class="img-circle">
                                             <div class="ml-2">
                                                 <span class="text-dark text-muted">Varun
                                                     Dhavan <small class="d-block text-success">online</small></span>
@@ -605,7 +577,8 @@
     <!--This page JavaScript -->
     <!--chartis chart-->
     <script src="/userpage/plugins/bower_components/chartist/dist/chartist.min.js"></script>
-    <script src="/userpage/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+    <script src="/userpage/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js">
+    </script>
     <script src="/userpage/js/pages/dashboards/dashboard1.js"></script>
 </body>
 
