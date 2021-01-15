@@ -30,4 +30,4 @@ Auth::routes();
     Route::get('/layouts/dokter_rekammedis', [App\Http\Controllers\HomeController::class, 'dokter_rekammedis'])->name('dokter_rekammedis');
     Route::get('/layouts/dokter_repfeedback', [App\Http\Controllers\HomeController::class, 'dokter_repfeedback'])->name('dokter_rekammedis');
 
-Route::post('/')
+Route::post('/');

@@ -35,7 +35,7 @@
 
 
 
-    <title>Hello, world!</title>
+    <title>Home</title>
 </head>
 
 <body>
