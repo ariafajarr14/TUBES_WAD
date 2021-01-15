@@ -11,7 +11,7 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Rekam Medis</title>
+    <title>Feedback Dokter</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/userpage/plugins/images/favicon.png">
@@ -275,8 +275,7 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center"> 2020 © Ample Admin brought to you by <a
-                    href="https://www.wrappixel.com/">wrappixel.com</a>
+            <footer class="footer text-center"> 2020 © Klinik Ku
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
