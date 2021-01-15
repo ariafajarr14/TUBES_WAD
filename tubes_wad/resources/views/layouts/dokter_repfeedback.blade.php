@@ -216,7 +216,7 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Products Yearly Sales</h3>
+                            <h3 class="box-title">Dokter Bedah</h3>
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
@@ -224,10 +224,10 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title">Card title</h5>
-                                            <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
+                                            <h5 class="card-title">Aria Fajar</h5>
+                                            <p class="card-text">Dokter spesialis bedah yang sudah berpengalaman selama 
+                                            30 tahun lebih dan memiliki jam terbang tinggi saat operasi
+                                            .</p>
                                             <p class="card-text"><small class="text-muted">Last updated 3 mins
                                                     ago</small></p>
 
@@ -236,6 +236,7 @@
                                                 data-target="#exampleModal">
                                                 Kirim Pesan
                                             </button>
+
 
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModal" tabindex="-1"
