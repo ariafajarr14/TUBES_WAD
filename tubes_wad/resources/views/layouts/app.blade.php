@@ -218,29 +218,38 @@
                 <!-- ============================================================== -->
                 <!-- PRODUCTS YEARLY SALES -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                        <div class="white-box">
-                            <h3 class="box-title">Jejak Rekam Dokter </h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Angka Keberhasilan</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Angka Kematian</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
-                                </div>
-                            </div>
+                <section class="about" id="about">
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-5" style="height: 559px;">
+                            <img src="/img/aboutus.png" alt="">
+                        </div>
+                        <div class="col-sm-7">
+                            <h2 class="text-center">Selamat Datang di Klinik Ku</h2>
+                            <center>
+                                <hr>
+                            </center>
+                            <p>
+                                <strong>Klinik Ku</strong> merupakan platform klinik digital yang siap melayani
+                                dan membantu masalah kesehatan kamu kapanpun dan dimanapun.
+                            </p>
+                            <br>
+                            <h5 id="h5text">Mengapa pilih Klinik Ku ?</h5>
+                            <p>Memilih Klinik Ku akan mempertemukan kamu dengan dokter umum yang berpengalaman dan
+                                tersertifikasi secara cepat. Tidak perlu repot mencari dokter terdekat dan harus keluar
+                                rumah. Klinik Ku memastikan kamu mendapatkan pelayanan terbaik.
+                                Kamu bisa melakukan konsultasi dan diskusi kesehatan dengan dokter kami, rekomendasi
+                                obat,
+                                rujukan ke rumah sakit, hingga terapi pemulihan pasca sembuh dari penyakit dan upaya
+                                pencegahan terhadap penyakit maupun kondisi kesehatan lainnya.
+                            </p>
                         </div>
                     </div>
                 </div>
+
             </div>
+        </section>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
