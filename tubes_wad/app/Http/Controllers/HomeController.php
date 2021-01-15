@@ -28,10 +28,31 @@ class HomeController extends Controller
 
     public function form()
     {
-        return view('/layouts/form');
+        return view('/layouts/client_form');
     }
-    public function pembayaran()
+    public function daftar_obat()
     {
-        return view('/layouts/pembayaran');
+        return view('/layouts/daftar_obat');
     }
+
+    public function client_feedback()
+    {
+        return view('/layouts/client_feedback');
+    }
+
+    public function tambahobat()
+    {
+        return view('/layouts/admin_tambahobat');
+    }
+
+    public function dokter_rekammedis()
+    {
+        return view('/layouts/dokter_rekammedis');
+    }
+
+    public function dokter_repfeedback()
+    {
+        return view('/layouts/dokter_repfeedback');
+    }
+    
 }

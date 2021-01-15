@@ -104,7 +104,6 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -112,7 +111,6 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
-                        
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/home"
                                 aria-expanded="false">
@@ -120,8 +118,8 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        
-                        
+
+
                         @if (auth()->user()->role=="client")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/client_form"
@@ -144,8 +142,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_repfeedback"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_repfeedback" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rep-ly Feedback</span>
                             </a>
@@ -154,8 +152,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_rekammedis"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_rekammedis" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rekam Medis</span>
                             </a>
@@ -164,15 +162,15 @@
 
                         @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/admin_tambahobat"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/admin_tambahobat" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Obat</span>
                             </a>
                         </li>
                         @endif
 
-                       
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/daftar_obat"
                                 aria-expanded="false">
@@ -180,8 +178,6 @@
                                 <span class="hide-menu">Lihat Daftar Harga Obat</span>
                             </a>
                         </li>
-
-                                   
 
                         <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -200,7 +196,6 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-        
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -221,20 +216,87 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Products Yearly Sales</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
+                            <h3 class="box-title">Obat</h3>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary mt-2" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        Tambah Obat
+                                    </button>
+
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1"
+                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Tambahkan Obat</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="namaObat">Nama Obat</label>
+                                                            <input type="text" name="namaObat" class="form-control"
+                                                                id="namaObat" aria-describedby="namaObat">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="jenisObat">Jenis Obat</label>
+                                                            <input type="text" name="jenisObat"class="form-control"
+                                                                id="jenisObat" aria-describedby="jenisObat">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Dosis">Dosis</label>
+                                                            <input type="text" name="Dosis" class="form-control"
+                                                                id="Dosis" aria-describedby="Dosis">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="Harga">Harga</label>
+                                                            <input type="text" name="Harga" class="form-control"
+                                                                id="Harga" aria-describedby="Harga">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="table-responsive">
+                                        <table class="table no-wrap mt-3">
+                                            <thead>
+                                                <tr>
+                                                    <th class="border-top-0">#</th>
+                                                    <th class="border-top-0">Nama</th>
+                                                    <th class="border-top-0">Jenis</th>
+                                                    <th class="border-top-0">Dosis</th>
+                                                    <th class="border-top-0">Harga</th>
+                                                    <th class="border-top-0">Aksi</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td class="txt-oflo">Konidin</td>
+                                                    <td class="txt-oflo">SALE</td>
+                                                    <td class="txt-oflo">SALE</td>
+                                                    <td class="txt-oflo"><span class="text-success">$24</span></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-info">Edit</button>
+                                                        <button type="button" class="btn btn-danger">Hapus</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

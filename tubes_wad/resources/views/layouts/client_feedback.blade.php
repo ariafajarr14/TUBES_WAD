@@ -104,7 +104,6 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -112,7 +111,6 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
-                        
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/home"
                                 aria-expanded="false">
@@ -181,8 +179,6 @@
                             </a>
                         </li>
 
-                                   
-
                         <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
@@ -200,7 +196,6 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-        
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -221,20 +216,22 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Products Yearly Sales</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
+                            <h3 class="box-title">Feedback</h3>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="/img/feedbackdokter.png" class="card-img" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Dr. Aria Fajar Ramdhany</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to additional content. This content is a little bit
+                                                longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

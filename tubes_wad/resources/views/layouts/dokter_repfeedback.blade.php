@@ -104,7 +104,6 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -112,7 +111,6 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
-                        
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/home"
                                 aria-expanded="false">
@@ -120,8 +118,8 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        
-                        
+
+
                         @if (auth()->user()->role=="client")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/client_form"
@@ -144,8 +142,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_repfeedback"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_repfeedback" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rep-ly Feedback</span>
                             </a>
@@ -154,8 +152,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_rekammedis"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_rekammedis" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rekam Medis</span>
                             </a>
@@ -164,15 +162,15 @@
 
                         @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/admin_tambahobat"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/admin_tambahobat" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Obat</span>
                             </a>
                         </li>
                         @endif
 
-                       
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/daftar_obat"
                                 aria-expanded="false">
@@ -180,8 +178,6 @@
                                 <span class="hide-menu">Lihat Daftar Harga Obat</span>
                             </a>
                         </li>
-
-                                   
 
                         <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -200,7 +196,6 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-        
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -222,19 +217,52 @@
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <h3 class="box-title">Products Yearly Sales</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <img src="/img/client.png" class="card-img" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural lead-in to additional content. This content is a little bit
+                                                longer.</p>
+                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
+                                                    ago</small></p>
+
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target="#exampleModal">
+                                                Kirim Pesan
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Kirim</button>
+                                                        </div>
+                                                    </div>  
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

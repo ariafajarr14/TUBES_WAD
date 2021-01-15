@@ -104,7 +104,6 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        
         <aside class="left-sidebar" data-sidebarbg="skin6">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
@@ -112,7 +111,6 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <!-- User Profile-->
-                        
                         <li class="sidebar-item pt-2">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/home"
                                 aria-expanded="false">
@@ -180,8 +178,7 @@
                                 <span class="hide-menu">Lihat Daftar Harga Obat</span>
                             </a>
                         </li>
-
-                                   
+                        
 
                         <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -200,7 +197,6 @@
             </div>
             <!-- End Sidebar scroll-->
         </aside>
-        
         <!-- ============================================================== -->
         <!-- End Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
@@ -221,22 +217,44 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Products Yearly Sales</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Mac</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Windows</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
+                            <h3 class="box-title">Sampaikan Keluhan Anda</h3>
+                            <form>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Keluhan seperti apa yang anda rasakan
+                                        ?</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        placeholder="misalkan: Saya hari ini mengalami pusing kepala sebelah"></textarea>
                                 </div>
-                            </div>
+
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Sudah berapa lama anda merasakan itu ?</label>
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="misalnya: 2 hari">
+                                </div>
+
+                                <fieldset class="form-group">
+                                    <div class="row">
+                                        <legend class="col-form-label col-sm-12 pt-0">Apakah anda memiliki riwayat penyakit ?</legend>
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                    id="gridRadios1" value="option1" checked>
+                                                <label class="form-check-label" for="gridRadios1">
+                                                    Ya
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="gridRadios"
+                                                    id="gridRadios2" value="option2">
+                                                <label class="form-check-label" for="gridRadios2">
+                                                    Tidak ada
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <button type="button" class="btn btn-danger">Sampaikan</button>
+                            </form>
                         </div>
                     </div>
                 </div>
