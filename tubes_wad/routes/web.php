@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 
 
-Auth::routes();
+
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/layouts/dokter_rekammedis', [App\Http\Controllers\HomeController::class, 'dokter_rekammedis'])->name('dokter_rekammedis');
@@ -30,6 +30,8 @@ Auth::routes();
     Route::get('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'index'])->name('admin_tambahobat');
     Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'store'])->name('admin_tambahobat');
     Route::get('/layouts/daftar_obat', [App\Http\Controllers\ObatController::class, 'index2'])->name('daftar_obat');
+    Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'delete'])->name('admin_tambahobat.delete');
+
     //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'update'])->name('admin_tambahobat');
     Route::get('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'clientform'])->name('client_form');
     Route::post('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'store'])->name('client_form');
@@ -38,3 +40,5 @@ Auth::routes();
     Route::get('/layouts/dokter_repfeedback', [App\Http\Controllers\DokterController::class, 'indexreplydokter'])->name('dokter_repfeedback');
     Route::post('/layouts/dokter_repfeedback', [App\Http\Controllers\DokterController::class, 'store'])->name('dokter_repfeedback');
     Route::get('/layouts/client_feedback', [App\Http\Controllers\DokterController::class, 'dokterfeedback'])->name('client_feedback');
+
+    Auth::routes();

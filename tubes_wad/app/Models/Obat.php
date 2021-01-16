@@ -21,6 +21,6 @@ class Obat extends Model
         'namaObat',
         'jenisObat',
         'dosisObat',
-        'hargaObat',
+        'hargaObat'
     ];
 }

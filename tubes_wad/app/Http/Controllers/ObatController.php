@@ -45,6 +45,7 @@ class ObatController extends Controller
     {
         //
         $this->validate($request, [
+            'id',
             'namaObat' => 'required', 
             'jenisObat' => 'required', 
             'dosisObat' => 'required', 
@@ -52,6 +53,7 @@ class ObatController extends Controller
         ]);
 
         $obats = new Obat();
+        $obats->id = $request->input('id');
         $obats->namaObat = $request->input('namaObat');
         $obats->jenisObat = $request->input('jenisObat');
         $obats->dosisObat = $request->input('dosisObat');
@@ -71,6 +73,7 @@ class ObatController extends Controller
         //
     }
 
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -91,10 +94,31 @@ class ObatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     public function updateIndex($id){
+         $obats = Obat::find($id);
+         return view('/layouts/admin_tambahobat', compact('obats'));
+     }
     public function update(Request $request, $id)
     {
         //
         
+        $this->validate($request, [
+            'id',
+            'namaObat' => 'required', 
+            'jenisObat' => 'required', 
+            'dosisObat' => 'required', 
+            'hargaObat' => 'required'
+        ]);
+
+        $obats = Obat::find($id);
+        $obats->namaObat = $request->input('namaObat');
+        $obats->jenisObat = $request->input('jenisObat');
+        $obats->dosisObat = $request->input('dosisObat');
+        $obats->hargaObat = $request->input('hargaObat');
+        $obats->save();
+
+        return redirect('/layouts/admin_tambahobat');
     }
 
     /**
@@ -103,8 +127,16 @@ class ObatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function delete(Request $request)
+    {
+        $obats = obats::find($request->id);
+        $obats->delete();
+        return redirect(route('/layouts/admin_tambahobat'));
+    }
     public function destroy($id)
     {
         //
+        
+        
     }
 }

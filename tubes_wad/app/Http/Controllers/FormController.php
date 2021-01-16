@@ -38,6 +38,7 @@ class FormController extends Controller
     {
         //
         $this->validate($request, [
+            'id' => 'required', 
             'namaClient' => 'required', 
             'keluhan' => 'required', 
             'lama' => 'required', 

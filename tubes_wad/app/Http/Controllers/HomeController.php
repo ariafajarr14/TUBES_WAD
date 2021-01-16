@@ -26,13 +26,6 @@ class HomeController extends Controller
         return view('home');
     }
 
-    
-
-    public function client_feedback()
-    {
-        return view('/layouts/client_feedback');
-    }
-
         public function dokter_rekammedis()
     {
         return view('/layouts/dokter_rekammedis');
