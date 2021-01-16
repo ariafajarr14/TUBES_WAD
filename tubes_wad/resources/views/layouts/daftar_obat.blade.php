@@ -213,11 +213,11 @@
                                 <table class="table no-wrap">
                                     <thead>
                                         <tr>
-                                            <th class="border-top-0">#</th>
-                                            <th class="border-top-0">NAME</th>
-                                            <th class="border-top-0">STATUS</th>
-                                            <th class="border-top-0">DATE</th>
-                                            <th class="border-top-0">PRICE</th>
+                                            <th class="border-top-0">No</th>
+                                            <th class="border-top-0">Nama Obat</th>
+                                            <th class="border-top-0">Jenis Obat</th>
+                                            <th class="border-top-0">Dosis Obat</th>
+                                            <th class="border-top-0">Harga Obat</th>
                                         </tr>
                                     </thead>
                                     <tbody>
