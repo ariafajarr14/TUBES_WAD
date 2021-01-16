@@ -118,8 +118,8 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        
-                        
+
+
                         @if (auth()->user()->role=="client")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/client_form"
@@ -142,8 +142,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_repfeedback"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_repfeedback" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rep-ly Feedback</span>
                             </a>
@@ -152,8 +152,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_rekammedis"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_rekammedis" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rekam Medis</span>
                             </a>
@@ -162,15 +162,15 @@
 
                         @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/admin_tambahobat"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/admin_tambahobat" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Obat</span>
                             </a>
                         </li>
                         @endif
 
-                       
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/daftar_obat"
                                 aria-expanded="false">
@@ -178,7 +178,7 @@
                                 <span class="hide-menu">Lihat Daftar Harga Obat</span>
                             </a>
                         </li>
-                        
+
 
                         <a class="btn btn-block btn-danger text-white" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -217,43 +217,51 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Sampaikan Keluhan Anda</h3>
-                            <form>
+                            
+                            <form method="post" action="{{ route('client_form') }}">
+                                @csrf
+                                <h3 class="box-title">Hi, {{ Auth::user()->name }} Silahkan Sampaikan Keluhan Anda</h3>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Keluhan seperti apa yang anda rasakan
+                                    
+                                    <input type="hidden" class="form-control" name="namaClient" id="namaClient" value="{{ Auth::user()->name }}" placeholder="misalnya: 2 hari">
+                                </div>
+                                <div class="form-group">
+                                    <label for="keluhan">Keluhan seperti apa yang anda rasakan
                                         ?</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    <textarea class="form-control" name="keluhan" id="keluhan" rows="3"
                                         placeholder="misalkan: Saya hari ini mengalami pusing kepala sebelah"></textarea>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Sudah berapa lama anda merasakan itu ?</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                    <label for="lama">Sudah berapa lama anda merasakan itu ?</label>
+                                    <input type="text" class="form-control" name="lama" id="lama"
                                         placeholder="misalnya: 2 hari">
                                 </div>
 
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <legend class="col-form-label col-sm-12 pt-0">Apakah anda memiliki riwayat penyakit ?</legend>
+                                        <legend class="col-form-label col-sm-12 pt-0">Apakah anda memiliki riwayat
+                                            penyakit ?</legend>
                                         <div class="col-sm-10">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="gridRadios"
-                                                    id="gridRadios1" value="option1" checked>
+                                                <input class="form-check-input" type="radio" name="riwayat"
+                                                    id="gridRadios1" value="Ya" checked>
                                                 <label class="form-check-label" for="gridRadios1">
                                                     Ya
                                                 </label>
                                             </div>
                                             <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="gridRadios"
-                                                    id="gridRadios2" value="option2">
+                                                <input class="form-check-input" type="radio" name="riwayat"
+                                                    id="gridRadios2" value="Tidak">
                                                 <label class="form-check-label" for="gridRadios2">
                                                     Tidak ada
                                                 </label>
                                             </div>
+                                            <input type="hidden" id="dibuat" name="dibuat">
                                         </div>
                                     </div>
                                 </fieldset>
-                                <button type="button" class="btn btn-danger">Sampaikan</button>
+                                <button type="submit" class="btn btn-danger">Sampaikan</button>
                             </form>
                         </div>
                     </div>

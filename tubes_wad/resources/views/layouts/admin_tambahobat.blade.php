@@ -218,106 +218,51 @@
                         <div class="white-box">
                             <h3 class="box-title">Obat</h3>
                             <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row no-gutters">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary mt-2" data-toggle="modal"
-                                        data-target="#exampleModal">
-                                        Tambah Obat
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1"
-                                        aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Tambahkan Obat</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="namaObat">Nama Obat</label>
-                                                            <input type="text" name="namaObat" class="form-control"
-                                                                id="namaObat" aria-describedby="namaObat">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="jenisObat">Jenis Obat</label>
-                                                            <input type="text" name="jenisObat"class="form-control"
-                                                                id="jenisObat" aria-describedby="jenisObat">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="Dosis">Dosis</label>
-                                                            <input type="text" name="Dosis" class="form-control"
-                                                                id="Dosis" aria-describedby="Dosis">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="Harga">Harga</label>
-                                                            <input type="text" name="Harga" class="form-control"
-                                                                id="Harga" aria-describedby="Harga">
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="table-responsive">
-                                        <table class="table no-wrap mt-3">
-                                            <thead>
-                                                <tr>
-                                                    <th class="border-top-0">#</th>
-                                                    <th class="border-top-0">Nama</th>
-                                                    <th class="border-top-0">Jenis</th>
-                                                    <th class="border-top-0">Dosis</th>
-                                                    <th class="border-top-0">Harga</th>
-                                                    <th class="border-top-0">Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td class="txt-oflo">Konidin</td>
-                                                    <td class="txt-oflo">SALE</td>
-                                                    <td class="txt-oflo">SALE</td>
-                                                    <td class="txt-oflo"><span class="text-success">$24</span></td>
-                                                    <td>
-                                                        <button type="button" class="btn btn-info">Edit</button>
-                                                        <button type="button" class="btn btn-danger">Hapus</button>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                                <table class="table no-wrap mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Nama</th>
+                                            <th class="border-top-0">Jenis</th>
+                                            <th class="border-top-0">Dosis</th>
+                                            <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($obats as $obats)
+                                        <tr>
+                                            <td>{{$obats->id}}</td>
+                                            <td class="txt-oflo">{{$obats->namaObat}}</td>
+                                            <td class="txt-oflo">{{$obats->jenisObat}}</td>
+                                            <td class="txt-oflo">{{$obats->dosisObat}}</td>
+                                            <td class="txt-oflo"><span class="text-success">$
+                                                    {{$obats->hargaObat}}</span></td>
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center"> 2020 © Klinik Ku
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center"> 2020 © Klinik Ku
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->

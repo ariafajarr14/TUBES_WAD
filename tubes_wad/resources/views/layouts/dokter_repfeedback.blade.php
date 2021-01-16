@@ -217,19 +217,26 @@
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <h3 class="box-title">Dokter Bedah</h3>
+                            @foreach($forms as $forms)
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <img src="/img/client.png" class="card-img" alt="...">
                                     </div>
+
                                     <div class="col-md-8">
+
                                         <div class="card-body">
-                                            <h5 class="card-title">Aria Fajar</h5>
-                                            <p class="card-text">Dokter spesialis bedah yang sudah berpengalaman selama 
-                                            30 tahun lebih dan memiliki jam terbang tinggi saat operasi
-                                            .</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small></p>
+                                            <h4 class="card-title">dari, {{$forms->namaClient}}</h4>
+                                            <h5 class="card-title">Keluhan :</h5>
+                                            <p class="card-text ml-5">{{$forms->keluhan}}</p>
+                                            <h5 class="card-title">Berapa lama :</h5>
+                                            <p class="card-text ml-5">{{$forms->lama}}</p>
+                                            <h5 class="card-title">Riwayat penyakit :</h5>
+                                            <p class="card-text ml-5">{{$forms->riwayat}}</p>
+                                            <br>
+                                            <p class="card-text"><small class="text-muted">Dibuat tanggal :
+                                                    {{$forms->dibuat}}</small></p>
 
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary" data-toggle="modal"
@@ -243,28 +250,88 @@
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLabel">Modal title
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            ...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Kirim</button>
-                                                        </div>
-                                                    </div>  
+                                                        <form method="post" action="{{ route('dokter_repfeedback') }}">
+                                                        @csrf
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Rep-ly Feedback
+                                                                </h5>
+                                                                <button type="button" class="close" data-dismiss="modal"
+                                                                    aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+
+                                                            <div class="modal-body">
+
+                                                                @csrf
+                                                                <h3 class="box-title">Silahkan Sampaikan Pesan Kepada
+                                                                    Client Anda</h3>
+                                                                <div class="form-group">
+
+                                                                    <input type="hidden" class="form-control"
+                                                                        name="namaDokter" id="namaDokter"
+                                                                        value="{{ Auth::user()->name }}"
+                                                                        placeholder="dsada">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="pesan">Pesan
+                                                                        ?</label>
+                                                                    <textarea class="form-control" name="pesan"
+                                                                        id="pesan" rows="3"
+                                                                        placeholder=""></textarea>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <label for="saranObat">Saran obat yang harus dibeli</label>
+                                                                    <input type="text" class="form-control" name="saranObat"
+                                                                        id="saranObat" placeholder="">
+                                                                </div>
+
+                                                                <fieldset class="form-group">
+                                                                    <div class="row">
+                                                                        <legend class="col-form-label col-sm-12 pt-0">
+                                                                            Perlu periksa lebih lanjut ?</legend>
+                                                                        <div class="col-sm-10">
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                    type="radio" name="periksaLanjut"
+                                                                                    id="gridRadios1" value="Ya" checked>
+                                                                                <label class="form-check-label"
+                                                                                    for="gridRadios1">
+                                                                                    Ya
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="form-check">
+                                                                                <input class="form-check-input"
+                                                                                    type="radio" name="periksaLanjut"
+                                                                                    id="gridRadios2" value="Tidak">
+                                                                                <label class="form-check-label"
+                                                                                    for="gridRadios2">
+                                                                                    Tidak
+                                                                                </label>
+                                                                            </div>
+                                                                            <input type="hidden" id="dibuat"
+                                                                                name="dibuat">
+                                                                        </div>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+                                                                <button type="submit"
+                                                                    class="btn btn-danger">Sampaikan</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
+                                @endforeach
                             </div>
                         </div>
                     </div>

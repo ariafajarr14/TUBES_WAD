@@ -217,6 +217,7 @@
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
                             <h3 class="box-title">Feedback</h3>
+                            @foreach($formfeedbacks as $formfeedbacks)
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
@@ -224,16 +225,21 @@
                                     </div>
                                     <div class="col-md-8">
                                         <div class="card-body">
-                                            <h5 class="card-title">Dr. Aria Fajar Ramdhany</h5>
-                                            <p class="card-text">This is a wider card with supporting text below as a
-                                                natural lead-in to additional content. This content is a little bit
-                                                longer.</p>
-                                            <p class="card-text"><small class="text-muted">Last updated 3 mins
-                                                    ago</small></p>
+                                        <h4 class="card-title">dari, dr. {{$formfeedbacks->namaDokter}}</h4>
+                                            <h5 class="card-title">Pesan :</h5>
+                                            <p class="card-text ml-5">{{$formfeedbacks->pesan}}</p>
+                                            <h5 class="card-title">Saran Obat :</h5>
+                                            <p class="card-text ml-5">{{$formfeedbacks->saranObat}}</p>
+                                            <h5 class="card-title">Periksa Lebih Lanjut :</h5>
+                                            <p class="card-text ml-5">{{$formfeedbacks->periksaLanjut}}</p>
+                                            <br>
+                                            <p class="card-text"><small class="text-muted">Dibuat tanggal :
+                                                    {{$formfeedbacks->dibuat}}</small></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

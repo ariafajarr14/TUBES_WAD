@@ -231,49 +231,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td class="txt-oflo">Paracetamol</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 18, 2021</td>
-                                            <td><span class="text-success">$1</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td class="txt-oflo">Tolak Angin</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 19, 2021</td>
-                                            <td><span class="text-success">$1</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td class="txt-oflo">Sefalosporin</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 19, 2021</td>
-                                            <td><span class="text-success">$2</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td class="txt-oflo">Sefalosporin</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 20, 2021</td>
-                                            <td><span class="text-success">$4</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td class="txt-oflo">Polipeptida</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 21, 2021</td>
-                                            <td><span class="text-success">$12</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td class="txt-oflo">Sulfonamida</td>
-                                            <td>READY</td>
-                                            <td class="txt-oflo">April 23, 2021</td>
-                                            <td><span class="text-success">$11</span></td>
-                                        </tr>
-                                        
+                                    @foreach($obats as $obats)
+                                                <tr>
+                                                    <td>{{$obats->id}}</td>
+                                                    <td class="txt-oflo">{{$obats->namaObat}}</td>
+                                                    <td class="txt-oflo">{{$obats->jenisObat}}</td>
+                                                    <td class="txt-oflo">{{$obats->dosisObat}}</td>
+                                                    <td class="txt-oflo"><span class="text-success">$
+                                                            {{$obats->hargaObat}}</span></td>
+                                                </tr>
+                                                @endforeach
                                     </tbody>
                                 </table>
                                 </div>

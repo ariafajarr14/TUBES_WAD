@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ObatController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\DokterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,20 +20,21 @@ Route::get('/', function () {
 });
 //doktre
 
+
+
 Auth::routes();
 
-
-
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/layouts/client_form', [App\Http\Controllers\HomeController::class, 'form'])->name('client_form');
-    Route::get('/layouts/daftar_obat', [App\Http\Controllers\HomeController::class, 'daftar_obat'])->name('daftar_obat');
-    Route::get('/layouts/client_feedback', [App\Http\Controllers\HomeController::class, 'client_feedback'])->name('client_feedback');
-    Route::get('/layouts/admin_tambahobat', [App\Http\Controllers\HomeController::class, 'tambahobat'])->name('admin_tambahobat');
     Route::get('/layouts/dokter_rekammedis', [App\Http\Controllers\HomeController::class, 'dokter_rekammedis'])->name('dokter_rekammedis');
-    Route::get('/layouts/dokter_repfeedback', [App\Http\Controllers\HomeController::class, 'dokter_repfeedback'])->name('dokter_rekammedis');
 
+    Route::get('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'index'])->name('admin_tambahobat');
+    Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'store'])->name('admin_tambahobat');
+    Route::get('/layouts/daftar_obat', [App\Http\Controllers\ObatController::class, 'index2'])->name('daftar_obat');
+    //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'update'])->name('admin_tambahobat');
+    Route::get('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'clientform'])->name('client_form');
+    Route::post('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'store'])->name('client_form');
+    Route::get('/layouts/client_feedback', [App\Http\Controllers\ClientController::class, 'clientfeedback'])->name('client_feedback');
 
-
-// route untuk keluhan
-use App\Http\Controllers\keluhanController;
-Route::resource('keluhans', keluhanController::class);
+    Route::get('/layouts/dokter_repfeedback', [App\Http\Controllers\DokterController::class, 'indexreplydokter'])->name('dokter_repfeedback');
+    Route::post('/layouts/dokter_repfeedback', [App\Http\Controllers\DokterController::class, 'store'])->name('dokter_repfeedback');
+    Route::get('/layouts/client_feedback', [App\Http\Controllers\DokterController::class, 'dokterfeedback'])->name('client_feedback');
