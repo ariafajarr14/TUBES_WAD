@@ -240,8 +240,7 @@
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <form method="post" action="{{ route('dokter_repfeedback') }}">
-                                                        @csrf
+                                                        
                                                             <div class="modal-header">
                                                                 <h5 class="modal-title" id="exampleModalLabel">Rep-ly Feedback
                                                                 </h5>
@@ -250,10 +249,9 @@
                                                                     <span aria-hidden="true">&times;</span>
                                                                 </button>
                                                             </div>
-
+                                                            <form method="post" action="{{ route('dokter_repfeedback') }}">
+                                                        @csrf
                                                             <div class="modal-body">
-
-                                                                @csrf
                                                                 <h3 class="box-title">Silahkan Sampaikan Pesan Kepada
                                                                     Client Anda</h3>
                                                                 <div class="form-group">

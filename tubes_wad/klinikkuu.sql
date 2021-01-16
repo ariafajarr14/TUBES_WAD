@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2021 at 04:52 PM
+-- Generation Time: Jan 16, 2021 at 05:24 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -132,13 +132,6 @@ CREATE TABLE `obats` (
   `deleted_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `obats`
---
-
-INSERT INTO `obats` (`id`, `namaObat`, `jenisObat`, `dosisObat`, `hargaObat`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Konidin', 'Sakit Kepala', '1ml', '25000', '2021-01-16 08:42:04', '2021-01-16 08:42:04', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -248,13 +241,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `formfeedbacks`
 --
 ALTER TABLE `formfeedbacks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `keluhans`
@@ -272,7 +265,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `obats`
 --
 ALTER TABLE `obats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`

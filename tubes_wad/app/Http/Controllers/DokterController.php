@@ -54,7 +54,7 @@ class DokterController extends Controller
     {
         //
         $this->validate($request, [
-            'id' => 'required', 
+            'id', 
             'namaDokter' => 'required', 
             'pesan' => 'required', 
             'saranObat' => 'required', 
