@@ -129,9 +129,7 @@ class ObatController extends Controller
      */
     public function delete(Request $request)
     {
-        $obats = obats::find($request->id);
-        $obats->delete();
-        return redirect(route('/layouts/admin_tambahobat'));
+        
     }
     public function destroy($id)
     {

@@ -295,84 +295,13 @@
                                             <td class="txt-oflo">{{$obats->dosisObat}}</td>
                                             <td class="txt-oflo"><span class="text-success">$
                                                     {{$obats->hargaObat}}</span></td>
-                                            <form method="post" action="{{ route('admin_tambahobat.delete') }}"
-                                                onsubmit="return confirm('Yakin hapus data ?')">
-                                                @csrf
-                                                @method('DELETE')
-                                                <input type="hidden" value="{{$obats->id}}" name="id">
-                                                <td>
-                                                    <button class="btn btn-danger">Hapus</button>
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#editdata">
-                                                        Launch demo modal
-                                                    </button>
+                                            <form method="post" action="{{ route('admin_tambahobat') }}" onsubmit="return confirm('Yakin hapus data ?')">
+                                            @csrf
 
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="editdata" tabindex="-1"
-                                                        aria-labelledby="editdata" aria-hidden="true">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="editdata">Modal
-                                                                        title</h5>
-                                                                    <button type="button" class="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <form method="post"
-                                                                        action="{{ route('admin_tambahobat') }}">
-                                                                        @csrf
-                                                                        <div class="modal-body">
-                                                                            <div class="form-group">
-                                                                                <input type="hidden"
-                                                                                    class="form-control" id="id"
-                                                                                    name="id"
-                                                                                    aria-describedby="emailHelp">
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="namaObat">Nama Obat :
-                                                                                </label>
-                                                                                <input type="text" class="form-control"
-                                                                                    id="namaObat" name="namaObat"
-                                                                                    aria-describedby="emailHelp">
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="jenisObat">Jenis Obat :
-                                                                                </label>
-                                                                                <input type="text" class="form-control"
-                                                                                    name="jenisObat" id="jenisObat">
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="dosisObat">Dosis Obat :
-                                                                                </label>
-                                                                                <input type="text" class="form-control"
-                                                                                    name="dosisObat" id="dosisObat">
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="hargasObat">Harga Obat :
-                                                                                </label>
-                                                                                <input type="text" class="form-control"
-                                                                                    name="hargaObat" id="hargaObat">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="modal-footer">
-                                                                            <button type="button"
-                                                                                class="btn btn-secondary"
-                                                                                data-dismiss="modal">Close</button>
-                                                                            <button type="submit"
-                                                                                class="btn btn-primary">Save
-                                                                                changes</button>
-                                                                        </div>
-                                                                    </form>
-                                                                </div>
-                                 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
+                                            
+                                            <td>
+                                                <button class="btn btn-danger" value="delete">Hapus</button>
+                                            </td>
                                             </form>
                                         </tr>
                                         @endforeach

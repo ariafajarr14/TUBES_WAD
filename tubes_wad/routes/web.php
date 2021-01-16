@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DokterController;
+use App\Http\Controllers\NgobatController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +31,7 @@ Route::get('/', function () {
     Route::get('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'index'])->name('admin_tambahobat');
     Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'store'])->name('admin_tambahobat');
     Route::get('/layouts/daftar_obat', [App\Http\Controllers\ObatController::class, 'index2'])->name('daftar_obat');
-    Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'delete'])->name('admin_tambahobat.delete');
+    //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'delete'])->name('admin_tambahobat.delete');
 
     //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'update'])->name('admin_tambahobat');
     Route::get('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'clientform'])->name('client_form');
@@ -41,4 +42,6 @@ Route::get('/', function () {
     Route::post('/layouts/dokter_repfeedback', [App\Http\Controllers\DokterController::class, 'store'])->name('dokter_repfeedback');
     Route::get('/layouts/client_feedback', [App\Http\Controllers\DokterController::class, 'dokterfeedback'])->name('client_feedback');
 
+
+      
     Auth::routes();
