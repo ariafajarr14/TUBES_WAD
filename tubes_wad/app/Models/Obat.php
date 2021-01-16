@@ -4,9 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Obat extends Model
 {
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
     use HasFactory;
     /**
      * The attributes that are mass assignable.
@@ -14,7 +19,7 @@ class Obat extends Model
      * @var array
      */
 
-    protected $table = 'obats';
+    public $table = 'obats';
 
     protected $fillable = [
         'id',

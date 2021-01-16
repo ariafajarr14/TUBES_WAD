@@ -28,10 +28,12 @@ Route::get('/', function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/layouts/dokter_rekammedis', [App\Http\Controllers\HomeController::class, 'dokter_rekammedis'])->name('dokter_rekammedis');
 
-    Route::get('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'index'])->name('admin_tambahobat');
-    Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'store'])->name('admin_tambahobat');
-    Route::get('/layouts/daftar_obat', [App\Http\Controllers\ObatController::class, 'index2'])->name('daftar_obat');
-    //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'delete'])->name('admin_tambahobat.delete');
+    Route::get('layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'index'])->name('admin_tambahobat');
+    Route::post('layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'store'])->name('admin_tambahobat');
+    Route::get('layouts/daftar_obat', [App\Http\Controllers\ObatController::class, 'index2'])->name('daftar_obat');
+    Route::get('layouts/admin_editobat', [App\Http\Controllers\ObatController::class, 'index3'])->name('admin_editobat');
+    Route::post('layouts/admin_editobat', [App\Http\Controllers\ObatController::class, 'update'])->name('admin_editobat');
+   // Route::delete('layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'delete'])->name('admin_tambahobat');
 
     //Route::post('/layouts/admin_tambahobat', [App\Http\Controllers\ObatController::class, 'update'])->name('admin_tambahobat');
     Route::get('/layouts/client_form', [App\Http\Controllers\ClientController::class, 'clientform'])->name('client_form');

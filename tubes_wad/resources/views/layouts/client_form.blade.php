@@ -150,16 +150,6 @@
                         </li>
                         @endif
 
-                        @if (auth()->user()->role=="dokter")
-                        <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="/layouts/dokter_rekammedis" aria-expanded="false">
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <span class="hide-menu">Rekam Medis</span>
-                            </a>
-                        </li>
-                        @endif
-
                         @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"

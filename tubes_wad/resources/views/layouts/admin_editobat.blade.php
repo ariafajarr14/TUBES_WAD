@@ -11,7 +11,7 @@
     <meta name="description"
         content="Ample Admin Lite is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
     <meta name="robots" content="noindex,nofollow">
-    <title>Rekam Medis</title>
+    <title> Obat </title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/userpage/plugins/images/favicon.png">
@@ -118,8 +118,8 @@
                                 <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
-                        
-                        
+
+
                         @if (auth()->user()->role=="client")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/client_form"
@@ -142,8 +142,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_repfeedback"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_repfeedback" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rep-ly Feedback</span>
                             </a>
@@ -152,8 +152,8 @@
 
                         @if (auth()->user()->role=="dokter")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/dokter_rekammedis"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/dokter_rekammedis" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Rekam Medis</span>
                             </a>
@@ -162,15 +162,15 @@
 
                         @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/admin_tambahobat"
-                                aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="/layouts/admin_tambahobat" aria-expanded="false">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <span class="hide-menu">Obat</span>
                             </a>
                         </li>
                         @endif
 
-                       
+
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/layouts/daftar_obat"
                                 aria-expanded="false">
@@ -216,41 +216,96 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Angka Rekam Medis</h3>
-                            <div class="d-md-flex">
-                                <ul class="list-inline d-flex ml-auto">
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-info"></i>Penyakit Berat</h5>
-                                    </li>
-                                    <li class="pl-3">
-                                        <h5><i class="fa fa-circle m-r-5 text-inverse"></i>Penyakit Ringan</h5>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div id="ct-visits" style="height: 405px;">
-                                <div class="chartist-tooltip" style="top: -17px; left: -12px;"><span
-                                        class="chartist-tooltip-value">6</span>
+                            <h3 class="box-title">Obat</h3>
+
+                            <form method="post" action="{{ route('admin_editobat') }}">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <input type="hidden" class="form-control" id="id" name="id"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="namaObat">Nama Obat : </label>
+                                        <input type="text" class="form-control" id="namaObat" name="namaObat"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="jenisObat">Jenis Obat : </label>
+                                        <input type="text" class="form-control" name="jenisObat" id="jenisObat">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dosisObat">Dosis Obat : </label>
+                                        <input type="text" class="form-control" name="dosisObat" id="dosisObat">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="hargasObat">Harga Obat : </label>
+                                        <input type="text" class="form-control" name="hargaObat" id="hargaObat">
+                                    </div>
                                 </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </form>
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <table class="table no-wrap mt-3">
+                                    <thead>
+                                        <tr>
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Nama</th>
+                                            <th class="border-top-0">Jenis</th>
+                                            <th class="border-top-0">Dosis</th>
+                                            <th class="border-top-0">Harga</th>
+                                            <th class="border-top-0">Aksi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach($obats as $obats)
+                                        <tr>
+                                            <td>{{$obats->id}}</td>
+                                            <td class="txt-oflo">{{$obats->namaObat}}</td>
+                                            <td class="txt-oflo">{{$obats->jenisObat}}</td>
+                                            <td class="txt-oflo">{{$obats->dosisObat}}</td>
+                                            <td class="txt-oflo"><span class="text-success">$
+                                                    {{$obats->hargaObat}}</span></td>
+
+
+                                            <td>
+                                                <form method="post" action="{{ route('admin_tambahobat') }}"
+                                                    onsubmit="return confirm('Yakin hapus data ?')">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger"
+                                                        value="delete">Hapus</button>
+                                                </form>
+                                            </td>
+
+                                        </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <footer class="footer text-center"> 2020 © Klinik Ku
-            </footer>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
         </div>
         <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
+        <!-- End Container fluid  -->
         <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer text-center"> 2020 © Klinik Ku
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->

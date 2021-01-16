@@ -24,6 +24,12 @@ class ObatController extends Controller
         $obats = Obat::all();
         return view('/layouts/daftar_obat', compact('obats'));
     }
+    public function index3()
+    {
+        //
+        $obats = Obat::all();
+        return view('/layouts/admin_editobat', compact('obats'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -95,14 +101,11 @@ class ObatController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function updateIndex($id){
-         $obats = Obat::find($id);
-         return view('/layouts/admin_tambahobat', compact('obats'));
-     }
-    public function update(Request $request, $id)
+     
+    public function update(Request $request)
     {
         //
-        
+        $obats = Obat::find($request->id);
         $this->validate($request, [
             'id',
             'namaObat' => 'required', 
@@ -110,7 +113,7 @@ class ObatController extends Controller
             'dosisObat' => 'required', 
             'hargaObat' => 'required'
         ]);
-
+        $id;
         $obats = Obat::find($id);
         $obats->namaObat = $request->input('namaObat');
         $obats->jenisObat = $request->input('jenisObat');
@@ -118,7 +121,7 @@ class ObatController extends Controller
         $obats->hargaObat = $request->input('hargaObat');
         $obats->save();
 
-        return redirect('/layouts/admin_tambahobat');
+        return redirect('/layouts/admin_editobat');
     }
 
     /**
@@ -127,6 +130,7 @@ class ObatController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function delete(Request $request)
     {
         
@@ -134,7 +138,11 @@ class ObatController extends Controller
     public function destroy($id)
     {
         //
-        
+    $obats = Obat::find($id);
+    $obats->delete();
+    Session::flash('success', 'The post was just trashed.');
+
+    return redirect('/layouts/admin_tambahobat');
         
     }
 }

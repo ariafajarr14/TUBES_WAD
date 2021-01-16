@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTblNgobatsTable extends Migration
+class CreateObatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateTblNgobatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_ngobats', function (Blueprint $table) {
+        Schema::create('obats', function (Blueprint $table) {
             $table->id();
             $table->string('namaObat');
             $table->string('jenisObat');
             $table->string('dosisObat');
             $table->string('hargaObat');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -30,6 +31,6 @@ class CreateTblNgobatsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tbl_ngobats');
+        Schema::dropIfExists('obats');
     }
 }

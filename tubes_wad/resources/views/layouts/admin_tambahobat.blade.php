@@ -283,7 +283,7 @@
                                             <th class="border-top-0">Jenis</th>
                                             <th class="border-top-0">Dosis</th>
                                             <th class="border-top-0">Harga</th>
-                                            <th class="border-top-0">Aksi</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -295,14 +295,10 @@
                                             <td class="txt-oflo">{{$obats->dosisObat}}</td>
                                             <td class="txt-oflo"><span class="text-success">$
                                                     {{$obats->hargaObat}}</span></td>
-                                            <form method="post" action="{{ route('admin_tambahobat') }}" onsubmit="return confirm('Yakin hapus data ?')">
-                                            @csrf
+
 
                                             
-                                            <td>
-                                                <button class="btn btn-danger" value="delete">Hapus</button>
-                                            </td>
-                                            </form>
+
                                         </tr>
                                         @endforeach
                                     </tbody>
