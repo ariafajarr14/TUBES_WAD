@@ -67,7 +67,7 @@ class ClientController extends Controller
         $forms->lama = $request->input('lama');
         $forms->riwayat = $request->input('riwayat');
         $forms->save();
-        return redirect('/layouts/client_form');
+        return redirect('/layouts/client_form')->with('success', 'Berhasil disampaikan');
     }
 
     /**

@@ -150,7 +150,7 @@
                         </li>
                         @endif
 
-                                               @if (auth()->user()->role=="admin")
+                        @if (auth()->user()->role=="admin")
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                 href="/layouts/admin_tambahobat" aria-expanded="false">
@@ -206,7 +206,12 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            <h3 class="box-title">Dokter Bedah</h3>
+                            @if(\Session::has('success'))
+                            <div class="alert alert-success">
+                                <p>{{\Session::get('success')}}</p>
+                            </div>
+                            @endif
+                            <h3 class="box-title">Rep-ly Feedback</h3>
                             @foreach($forms as $forms)
                             <div class="card mb-3" style="max-width: 540px;">
                                 <div class="row no-gutters">
@@ -228,6 +233,7 @@
                                             <p class="card-text"><small class="text-muted">Dibuat tanggal :
                                                     {{$forms->dibuat}}</small></p>
 
+
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary" data-toggle="modal"
                                                 data-target="#exampleModal">
@@ -240,17 +246,18 @@
                                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        
-                                                            <div class="modal-header">
-                                                                <h5 class="modal-title" id="exampleModalLabel">Rep-ly Feedback
-                                                                </h5>
-                                                                <button type="button" class="close" data-dismiss="modal"
-                                                                    aria-label="Close">
-                                                                    <span aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <form method="post" action="{{ route('dokter_repfeedback') }}">
-                                                        @csrf
+
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">Rep-ly
+                                                                Feedback
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <form method="post" action="{{ route('dokter_repfeedback') }}">
+                                                            @csrf
                                                             <div class="modal-body">
                                                                 <h3 class="box-title">Silahkan Sampaikan Pesan Kepada
                                                                     Client Anda</h3>
@@ -265,14 +272,14 @@
                                                                     <label for="pesan">Pesan
                                                                         ?</label>
                                                                     <textarea class="form-control" name="pesan"
-                                                                        id="pesan" rows="3"
-                                                                        placeholder=""></textarea>
+                                                                        id="pesan" rows="3" placeholder=""></textarea>
                                                                 </div>
 
                                                                 <div class="form-group">
-                                                                    <label for="saranObat">Saran obat yang harus dibeli</label>
-                                                                    <input type="text" class="form-control" name="saranObat"
-                                                                        id="saranObat" placeholder="">
+                                                                    <label for="saranObat">Saran obat yang harus
+                                                                        dibeli</label>
+                                                                    <input type="text" class="form-control"
+                                                                        name="saranObat" id="saranObat" placeholder="">
                                                                 </div>
 
                                                                 <fieldset class="form-group">

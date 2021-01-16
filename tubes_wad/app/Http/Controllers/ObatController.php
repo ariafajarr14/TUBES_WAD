@@ -65,7 +65,7 @@ class ObatController extends Controller
         $obats->dosisObat = $request->input('dosisObat');
         $obats->hargaObat = $request->input('hargaObat');
         $obats->save();
-        return redirect('/layouts/admin_tambahobat');
+        return redirect('/layouts/admin_tambahobat')->with('success', 'Data Berhasil Disimpan');
     }
 
     /**

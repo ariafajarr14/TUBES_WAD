@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2021 at 05:24 PM
+-- Generation Time: Jan 16, 2021 at 05:45 PM
 -- Server version: 10.4.16-MariaDB
 -- PHP Version: 7.4.12
 
@@ -35,6 +35,23 @@ CREATE TABLE `failed_jobs` (
   `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `formfeedback`
+--
+
+CREATE TABLE `formfeedback` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `namaDokter` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `pesan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `saranObat` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `periksaLanjut` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `dibuat` timestamp NOT NULL DEFAULT current_timestamp(),
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -103,17 +120,17 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(10, '2014_10_12_000000_create_users_table', 1),
-(11, '2014_10_12_100000_create_password_resets_table', 1),
-(12, '2019_08_19_000000_create_failed_jobs_table', 1),
 (13, '2021_01_15_132733_create_keluhans_table', 2),
 (14, '2021_01_15_150314_create_obats_table', 2),
 (21, '2021_01_15_174200_create_obats_table', 3),
-(23, '2021_01_16_051817_create_forms_table', 4),
-(24, '2021_01_16_092535_create_formfeedback_table', 5),
-(30, '2021_01_16_095656_create_formfeedbacks_table', 6),
 (34, '2021_01_16_132950_create_tbl_ngobats_table', 7),
-(35, '2021_01_16_154109_create_obats_table', 8);
+(37, '2014_10_12_000000_create_users_table', 8),
+(38, '2014_10_12_100000_create_password_resets_table', 8),
+(39, '2019_08_19_000000_create_failed_jobs_table', 8),
+(40, '2021_01_16_051817_create_forms_table', 8),
+(41, '2021_01_16_092535_create_formfeedback_table', 8),
+(42, '2021_01_16_095656_create_formfeedbacks_table', 8),
+(43, '2021_01_16_154109_create_obats_table', 8);
 
 -- --------------------------------------------------------
 
@@ -167,11 +184,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Admin', 'admin@admin', NULL, '$2y$10$oy6aWB//NsLHwu75lLfVDOPnHnuEj7feEopkICsDxnEyCDBKtATfu', NULL, '2021-01-14 12:38:10', '2021-01-14 12:38:10'),
-(2, 'client', 'Client', 'client@client', NULL, '$2y$10$qune/vsdreG6tUnG5cYFle5q2gwIa7SVxIMPu.vedYdpcdLGwcHhy', NULL, '2021-01-14 12:38:31', '2021-01-14 12:38:31'),
-(3, 'dokter', 'Dokter', 'dokter@dokter', NULL, '$2y$10$ettwXjpAWJtkZmwCAikIOOHGJzQEwIfdGZsLWwfv9HU5G/R/YQ40y', NULL, '2021-01-14 12:38:43', '2021-01-14 12:38:43'),
-(4, 'client', 'Aria Fajar Ramdhany', 'aria@client', NULL, '$2y$10$2MZm7053.x.bTI1MQmky0exsEDi0UFRVWtrdTc7WoSwSAHHhkpeki', NULL, '2021-01-15 23:49:41', '2021-01-15 23:49:41'),
-(5, 'dokter', 'Yusuf Herianto Manik', 'yusuf@dokter', NULL, '$2y$10$tU3gh9akQO7gcAxw6LU7SuH.EmYJfwIJ2pyuLcN4yCY/RWEANIU1i', NULL, '2021-01-16 00:38:41', '2021-01-16 00:38:41');
+(1, 'client', 'Aria Fajar Ramdhany', 'aria@client', NULL, '$2y$10$EJQcEzGootXjjO3PDbZt1uhqSAZ8Iv2ZSXrsehQtD7srBImrDl/g2', NULL, '2021-01-16 09:43:36', '2021-01-16 09:43:36'),
+(2, 'admin', 'Admin', 'admin@admin', NULL, '$2y$10$JfDQKBGcIqQ8uxqx8N5j7e5OgdwTxGRyik.PpKefnIaRxwlikhcbu', NULL, '2021-01-16 09:43:55', '2021-01-16 09:43:55'),
+(3, 'dokter', 'Yusuf Herianto Manik', 'yusuf@dokter', NULL, '$2y$10$yk8qzX/znIu5uchiAQv0feMrXDtBmLIpCHh.KUSLRhpbyLgZ2eS06', NULL, '2021-01-16 09:44:33', '2021-01-16 09:44:33');
 
 --
 -- Indexes for dumped tables
@@ -183,6 +198,12 @@ INSERT INTO `users` (`id`, `role`, `name`, `email`, `email_verified_at`, `passwo
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `formfeedback`
+--
+ALTER TABLE `formfeedback`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `formfeedbacks`
@@ -238,16 +259,22 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `formfeedback`
+--
+ALTER TABLE `formfeedback`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `formfeedbacks`
 --
 ALTER TABLE `formfeedbacks`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `keluhans`
@@ -259,19 +286,19 @@ ALTER TABLE `keluhans`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `obats`
 --
 ALTER TABLE `obats`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -67,7 +67,7 @@ class DokterController extends Controller
         $formfeedbacks->saranObat = $request->input('saranObat');
         $formfeedbacks->periksaLanjut = $request->input('periksaLanjut');
         $formfeedbacks->save();
-        return redirect('/layouts/dokter_repfeedback');
+        return redirect('/layouts/dokter_repfeedback')->with('success', 'Berhasil disampaikan');
     }
 
     /**

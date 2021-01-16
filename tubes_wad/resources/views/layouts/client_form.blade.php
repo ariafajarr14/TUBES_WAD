@@ -207,7 +207,11 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                         <div class="white-box">
-                            
+                        @if(\Session::has('success'))
+                            <div class="alert alert-success">
+                                <p>{{\Session::get('success')}}</p>
+                            </div>
+                            @endif
                             <form method="post" action="{{ route('client_form') }}">
                                 @csrf
                                 <h3 class="box-title">Hi, {{ Auth::user()->name }} Silahkan Sampaikan Keluhan Anda</h3>
